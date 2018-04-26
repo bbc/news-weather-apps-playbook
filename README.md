@@ -9,4 +9,4 @@
 
 [Android Code Analysis Tools](https://github.com/bbc/news-app-android/blob/develop/Project/config/README.md)
 
-
+[News Apps Public](https://github.com/BBC-News/news-app-public)
