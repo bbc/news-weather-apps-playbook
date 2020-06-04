@@ -42,12 +42,10 @@ A commit message should give a clear and succinct description of code changes to
 
 
 ## Further reading
-[The art of the commit](https://alistapart.com/article/the-art-of-the-commit/) 
+[The art of the commit](https://alistapart.com/article/the-art-of-the-commit/)
 
 [On the importance of commit messages](https://americanexpress.io/on-the-importance-of-commit-messages/)
 
 [Writing good commit messages: a practical guide](https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide/)
 
 [Which commit message convention do you use at work?](https://hashnode.com/post/which-commit-message-convention-do-you-use-at-work-ck3e4jbdd00zyo4s1h7mc7e0g)
-
-

@@ -1,7 +1,7 @@
 # BBC News Apps Team: A Clean Code Guide
 
 ## Why do we need this guide?
-Like so much of software engineering, there are many great ideas about what clean code looks like (probably as many as there are JSON parsing frameworks, at least). So, the question is not “what is clean code” but “what do we, the team, think of as clean code”. 
+Like so much of software engineering, there are many great ideas about what clean code looks like (probably as many as there are JSON parsing frameworks, at least). So, the question is not “what is clean code” but “what do we, the team, think of as clean code”.
 
 ### Okay, but why do we need that?
 
@@ -26,7 +26,7 @@ Consider carefully how much your classes, and methods, are doing with each line 
 However, also remember that if things get too small, they become very hard to comprehend as a whole later. Jon Reid has a good article about this. https://qualitycoding.org/single-responsibility-principle/
 
 ## Open/Closed Principle
-Or, to put it into simpler terms, strive to write code that anticipates being in existence for years to come without trying to anticipate how it will be in existence in years to come. Good habits to build here include 
+Or, to put it into simpler terms, strive to write code that anticipates being in existence for years to come without trying to anticipate how it will be in existence in years to come. Good habits to build here include
 
 Make the public API as small as possible
 Make the code as simple as possible, to achieve what needs to be done right now
@@ -43,27 +43,27 @@ https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
 ## Interface Segregation Principle
 "many client-specific interfaces are better than one general-purpose interface."
 
-In short, much as your classes and methods should be small and focused, so should the interfaces. 
+In short, much as your classes and methods should be small and focused, so should the interfaces.
 
 ## Dependency Inversion Principle
 "depend upon abstractions, [not] concretions."
 
-Again, looking to protocols can really help here, making your code much more malleable, open to re-use and simpler to stub or mock. 
+Again, looking to protocols can really help here, making your code much more malleable, open to re-use and simpler to stub or mock.
 
 ## Immutability By Default
-Be lazy and make it immutable by default. Why? Because anything that cannot change does not need to be tested (as much). 
+Be lazy and make it immutable by default. Why? Because anything that cannot change does not need to be tested (as much).
 
-Not only do you get to write less tests but you make it easier to reason about your code. This has all sorts of great side effects, including making it easier to debug issues. Imagine looking at a mechanical motor and trying to spot the issue...the less things that move/are moving the simpler it will be to see the problem. 
+Not only do you get to write less tests but you make it easier to reason about your code. This has all sorts of great side effects, including making it easier to debug issues. Imagine looking at a mechanical motor and trying to spot the issue...the less things that move/are moving the simpler it will be to see the problem.
 
 ## Unidirection Data Flow By Default
-A unidirectional flow of data works well in isolation and even better in concert with other ideas, like immutability by default and MVVM. 
+A unidirectional flow of data works well in isolation and even better in concert with other ideas, like immutability by default and MVVM.
 
 This is often achieved by the use of frameworks like, for example, Rx. However, the principle is not dependent on the technology.
 
 https://academy.realm.io/posts/eric-maxwell-uni-directional-architecture-android-using-realm/
 
 ## Headers
-The file header should convey only that information which cannot otherwise be conveyed in the file otherwise. For example, a copyright is a common legal requirement for many companies. 
+The file header should convey only that information which cannot otherwise be conveyed in the file otherwise. For example, a copyright is a common legal requirement for many companies.
 
 Recommended Style:
 
@@ -88,10 +88,10 @@ Kotlin Comment Format: https://kotlinlang.org/docs/reference/kotlin-doc.html
 Logging is so useful it will probably still be with us for the first AI that writes “destroy the humans” to stderr. In the meantime, let’s make our logging as useful as it can be with these simple habits
 Only log what you need. Don’t fill the console with log messages or you will struggle to find signal in the noise.
 Only log while you need. Remove the log statements when you are done.
-Only log in context. What else could you add to your log message to make it useful to someone who is not you? Line Number? Class Name? Method Name? Timestamp? ID? 
+Only log in context. What else could you add to your log message to make it useful to someone who is not you? Line Number? Class Name? Method Name? Timestamp? ID?
 
 ## Stringly Typed Is Not Strongly Typed / Avoid Primitive Obsession
-Everytime you decide to represent something as a string, as yourself: “Is this actually string”? Is there JSON inside that string? XML? Is there a numerical ID inside there? A datestamp? A time interval? 
+Everytime you decide to represent something as a string, as yourself: “Is this actually string”? Is there JSON inside that string? XML? Is there a numerical ID inside there? A datestamp? A time interval?
 
 If the string is simply there until it is parsed/re-interpreted, consider making that change at the edge of the app (probably near the API layer), or even asking for a different format from the API. The rest of your code will very likely be simpler, more readable, more type safe and more autocomplete friendly.
 Helpers, Utilities and Manager Classes
@@ -108,7 +108,7 @@ Functional Programming?
 TBC: something about FP, POP and OO?
 
 ## Accessibility
-The BBC is for everyone and so we embrace accessibility by default - it is not an afterthought, a later addition, or optional. We consider it at design, during implementation and in quality assurance. 
+The BBC is for everyone and so we embrace accessibility by default - it is not an afterthought, a later addition, or optional. We consider it at design, during implementation and in quality assurance.
 If you work on a ticket that does not have accessibility considerations, ask yourself if it should and, if so, in what way, and ask the question. Remember our mission statement :
 "To act in the public interest, serving all audiences with impartial, high-quality and distinctive media content and services that inform, educate and entertain."
 
@@ -117,7 +117,7 @@ We cannot serve all audiences if not all of them can access the news.
 More information: https://confluence.dev.bbc.co.uk/pages/viewpage.action?pageId=154783891
 
 ## Security & Privacy
-Our users, the public, have the right to expect that we will treat their privacy and security with the level of seriousness that it deserves. Whilst this is a nice aspirational statement in a country like the UK, it could impact someones liberty or life in others, where reading habits may be monitored and acted upon. 
+Our users, the public, have the right to expect that we will treat their privacy and security with the level of seriousness that it deserves. Whilst this is a nice aspirational statement in a country like the UK, it could impact someones liberty or life in others, where reading habits may be monitored and acted upon.
 
 "To act in the public interest…”
 
@@ -128,7 +128,7 @@ https://twitter.com/vixentael/status/968788222619869184?ref_src=twcamp%5Eshare%7
 It is often the case in BBC apps that aspects of data collection can be opted out by users. Please consider if that is the case if you are implementing a new data collection feature.
 
 ## Size Matters
-Keep your classes small and your methods much much smaller. A large class is likely a sign that there is some sort of abstraction class hiding inside. Find it, and set it free! 
+Keep your classes small and your methods much much smaller. A large class is likely a sign that there is some sort of abstraction class hiding inside. Find it, and set it free!
 
 Similarly, large methods are telling you the same thing - find the pieces and cut that into simpler, and smaller ones.
 
@@ -138,17 +138,6 @@ This can often be the case if you have large conditional logic - often, breaking
 
 This all makes readability, reasonability, and testability much easier. Future you will thank you.
 
-## Good Pull Requests
-A good pull request is a beautiful thing to behold and will earn you kudos from your fellow engineers, QA and, maybe even, future you (them again).
-
-So...what makes a good pull request, such that can earn you this level of adoration?
-
-It has a good branch name that references the ticket number and summarises the intent
-It has a good title that helps to set the scene and make your pull request discoverable amongst the many. It should be as brief a summary as makes sense to convey it’s intent as well as the JIRA ticket number.
-It more completely explains the intent in the description 
-It has any pertinent information for the reviewer (such as how to enable the feature, reference documents, hacks, workarounds, etc)
-Is update to date with it’s target branch (we use the rebase and /force push flow). You should check and rebase regularly until it is merged.
-It has been tagged appropriate to it’s status - for example, tagging it with “Code review” helps it stand out as being ready to review (and potentially merge).
 
 ## Backend For Frontend (AKA our new best friend, forever)
 We are currently pitching to have a middle layer service between the new API’s from the CMS (Optimo and Ares) and the apps themselves. We believe this is necessary because the output from these services is necessarily generic and, thus, unsuitable for a mobile app. To adopt these API’s as they are would require us to write a lot of business logic and data transform code on each client (web, ios and android) and to waste users bandwidth and time with noisy data transmission that is expensive to receive and parse.
@@ -172,7 +161,7 @@ Good Team Practices
 [BBC News Apps Team: iOS/Swift Style Guide](https://docs.google.com/document/d/1jXrss9JX3Cih42upizLPGDcPbjvoCObRhL8-oBhzZXU/edit)
 
 ### Android
-[BBC News Apps Team: Java/Kotlin Style Guide](https://github.com/bbc/news-app-android/blob/develop/AndroidCodingGuide.md) 
+[BBC News Apps Team: Java/Kotlin Style Guide](https://github.com/bbc/news-app-android/blob/develop/AndroidCodingGuide.md)
 [BBC News Apps Team: Android Studio Code Style Settings](https://github.com/bbc/news-app-android/blob/develop/Config/README.md)
 [BBC News Apps Team: Android Code Analysis Tools](https://github.com/bbc/news-app-android/blob/develop/Project/config/README.md)
 
