@@ -4,10 +4,7 @@
 
 If you're reading this and thinking about contributing, then welcome aboard! :wave:  
 
-This project is intended to encourage _participation_ and _collaboration_ across the BBC News team and the wider community in shaping how we write software and create brilliant products together.  
-
 Below are a few pointers on ways you can help us out...
-
 
 
 ### Open a pull request
