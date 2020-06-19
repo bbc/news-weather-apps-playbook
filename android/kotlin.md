@@ -2,23 +2,27 @@
 
 This document details our house style for writing Kotlin code.
 
-## Braces
+### Conditional expressions
 
-Use curly braces for single-line `if..else` statements.
+Use curly braces for complex `if..else` expressions.
 
-**Do this**
+We do this:
 ```kotlin
-if (condition) {
-  foo = 1
+return if (hours > 0) {
+    String.format("%s:%s:%s", hours, minutes, seconds)
 } else {
-  foo = 0
+    String.format("%s:%s", minutes, seconds)
 }
 ```
 
-**Don't do this**
+We don't do this:
 ```kotlin
-if (condition)
-  foo = 1
-else
-  foo = 0
+return if (hours > 0) String.format("%s:%s:%s", hours, minutes, seconds)
+else String.format("%s:%s", minutes, seconds)
+```
+
+For simple expressions that fit on a single line, braces can be omitted:
+
+```kotlin
+return if (isVisible) VISIBLE else GONE
 ```
