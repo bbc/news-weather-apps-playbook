@@ -1,8 +1,8 @@
 ## Playbook
 
-Welcome to the BBC News Apps playbook! :closed_book::sparkles:
+Welcome to the BBC News and Weather Apps playbook! :closed_book::sparkles:
 
-The playbook is a living document for us to detail our team practices. The project is intended to encourage _participation_ and _collaboration_ across the News Apps team and the wider community in shaping how we write software and create brilliant products together.
+The playbook is a living document for us to detail our team practices. The project is intended to encourage _participation_ and _collaboration_ across the News and Weather Apps team and the wider community in shaping how we write software and create brilliant products together.
 
 ### Contents
 - [Git](https://github.com/bbc/news-apps-playbook/blob/master/git/README.md)
