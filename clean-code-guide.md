@@ -94,7 +94,8 @@ Only log in context. What else could you add to your log message to make it usef
 Everytime you decide to represent something as a string, as yourself: “Is this actually string”? Is there JSON inside that string? XML? Is there a numerical ID inside there? A datestamp? A time interval?
 
 If the string is simply there until it is parsed/re-interpreted, consider making that change at the edge of the app (probably near the API layer), or even asking for a different format from the API. The rest of your code will very likely be simpler, more readable, more type safe and more autocomplete friendly.
-Helpers, Utilities and Manager Classes
+
+## Helpers, Utilities and Manager Classes
 We all make them, and don’t think very hard about them, but all too often they are just a bag of methods we don’t know what else to do with (or they become it). This is a code smell as, whilst it helps with the DRY principle, it typically flies in the face of SRP. It’s even worse if they have state!
 
 If you’ve managed to create an immutable class of static methods that all share a logical, common theme, then congratulations!
