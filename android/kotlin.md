@@ -29,20 +29,20 @@ return if (isVisible) VISIBLE else GONE
 
 ### Returns
 
-Functions with only a single expression can omit braces and return clause
+Functions with only a single expression can omit the braces and return statement
 
 If the function is simple, short and can fit in one line then the return should be written as an expression.
 
 _Do_
 
 ```Kotlin
-fun isFooAvailable(foo : Foo) : Boolean = fooProvider.findFoo(foo)
+fun getIsFooEnabled(fooId : String) : Boolean = fooProvider.getIsFooEnabledById(fooId)
 ```
 
 _Don't_
 
 ```Kotlin
-fun getIsFooEnabled(foo : Foo) : Boolean {
-  return fooProvider.findFoo(foo)
+fun getIsFooEnabled(fooId : String) : Boolean {
+  return fooProvider.getIsFooEnabledById(fooId)
 }
 ```
