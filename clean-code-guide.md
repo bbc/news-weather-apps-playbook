@@ -1,4 +1,4 @@
-# BBC News Apps Team: A Clean Code Guide
+# BBC News and Weather Apps Team: Clean Code Guide
 
 ## Why do we need this guide?
 Like so much of software engineering, there are many great ideas about what clean code looks like (probably as many as there are JSON parsing frameworks, at least). So, the question is not “what is clean code” but “what do we, the team, think of as clean code”.
@@ -6,7 +6,8 @@ Like so much of software engineering, there are many great ideas about what clea
 ### Okay, but why do we need that?
 
 The simple answer is that if we have a guide then we all know what is expected of us, and if we have a reference we all know against what our code will be measured at review.
-Who will maintain it? What if I don’t agree?
+
+### Who will maintain it? What if I don’t agree?
 This is a living document, meaning it is never finished. If you wish to change something, simply submit the change you want to see by opening a pull request and asking the team to comment.
 
 # Our Clean Code Guide
@@ -106,7 +107,17 @@ Naming is hard, so let’s follow Uncle Bob’s lead:
 Classes should be nouns
 Methods should be verbs
 Functional Programming?
-TBC: something about FP, POP and OO?
+
+TBD: something about FP, POP and OO?
+
+### Legacy Naming
+We all know that #NamingIsHard but we acknowledge that words can carry cultural, social, and historical significance. We accept that we cannot change the past, but we can own our future. With this in mind, we have decided that we will no longer use the following legacy names and will instead use alternatives...
+
+|Legacy Name|Preferred Name|
+|---------------|--------------|
+|blacklist|blocklist|
+|whitelist|allowlist|
+|master|main|
 
 ## Accessibility
 The BBC is for everyone and so we embrace accessibility by default - it is not an afterthought, a later addition, or optional. We consider it at design, during implementation and in quality assurance.
