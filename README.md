@@ -8,10 +8,10 @@ The playbook is a living document for us to detail our team practices. The proje
 - [Git](https://github.com/bbc/news-apps-playbook/blob/master/git/README.md)
   - [Commit messages](https://github.com/bbc/news-apps-playbook/blob/master/git/commit-messages.md)
   - [Pull requests](https://github.com/bbc/news-apps-playbook/blob/master/git/pull-requests.md)
-- [Android](https://github.com/bbc/news-apps-playbook/blob/master/android/README.md)
-  - [Kotlin style guide](https://github.com/bbc/news-apps-playbook/blob/master/android/kotlin.md)
-- [iOS](https://github.com/bbc/news-apps-playbook/blob/master/ios/README.md)
-  - [Swift style guide](https://github.com/bbc/news-apps-playbook/blob/master/ios/swift.md)
+- [Style guides](https://github.com/bbc/news-apps-playbook/blob/master/style/README.md)
+  - [Kotlin](https://github.com/bbc/news-apps-playbook/blob/master/style/kotlin.md)
+  - [Swift](https://github.com/bbc/news-apps-playbook/blob/master/style/swift.md)
+  - [Javascript](https://github.com/bbc/news-apps-playbook/blob/master/style/javascript.md)
 
 ### Contributing
 To contribute to the playbook, you can [create a pull request](https://github.com/bbc/news-apps-playbook/pull/new/master) or [open an issue](https://github.com/bbc/news-apps-playbook/issues).

@@ -2,6 +2,8 @@
 
 This document details our house style for writing Kotlin code.
 
+You can install code style settings for Android Studio by following the instructions [here](https://github.com/bbc/News-And-Weather-Android-Code-style).
+
 ### Conditionals
 
 In Kotlin, `if..else` syntax can be used for both statements and expressions.
