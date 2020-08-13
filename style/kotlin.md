@@ -51,4 +51,18 @@ fun getItemCount() =
 
 ```
 
-Avoid mixing functions that use an expression body with functions that use a return statement in the same class or file. If you do decide to mix the different styles, then they should be properly grouped together.
+Avoid mixing functions that use an expression body with functions that use a return statement in the same class or file. If you do decide to mix the different styles, then they should be properly grouped together.  
+
+### Lambdas  
+
+When writing lambda expressions, always use named parameters.
+
+_We do this_
+```kotlin
+items.map { item -> item.toEntity() }
+```
+
+_We don't do this_
+```kotlin
+items.map { it.toEntity() }
+```
