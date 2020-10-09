@@ -10,13 +10,8 @@ This a great aspirational statement of intent that encourages us all to remember
 
 ## Accessibility Champions
 
-We have multiple accessibility champions within our team and within the organisation. They are there to help you with any questions or concerns you may have. 
+We have multiple accessibility champions within our team and within the organisation. They are there to help you with any questions or concerns you may have.
 
 ### Contents
 - [README](https://github.com/bbc/news-apps-playbook/blob/master/accessibility/README.md)
   - [Our Baseline Commitment](https://github.com/bbc/news-apps-playbook/blob/master/accessibility/baseline.md)
-
-### Contributing
-To contribute to the playbook, you can [create a pull request](https://github.com/bbc/news-apps-playbook/pull/new/master) or [open an issue](https://github.com/bbc/news-apps-playbook/issues).
-
-Read the full guidelines for contributing [here](https://github.com/bbc/news-apps-playbook/blob/master/CONTRIBUTING.md).
