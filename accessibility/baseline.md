@@ -14,7 +14,7 @@ Continuing the example above, we might then improve the read out to group the el
 
 ## Dynamic Type
 
-*Text within the apps must correspond to the users preferred text size, at the operating system level.*
+**Text within the apps must correspond to the users preferred text size, at the operating system level.**
 
 There are, of course, exceptions to this, such as navigation bar titles, tab bar titles, and the like, where the operating system does not permit such changes.
 
