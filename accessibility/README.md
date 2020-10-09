@@ -8,6 +8,10 @@ This a great aspirational statement of intent that encourages us all to remember
 * What does good enough look like?
 * What does good enough look like when developing an experimental experience?
 
+## Accessibility Champions
+
+We have multiple accessibility champions within our team and within the organisation. They are there to help you with any questions or concerns you may have. 
+
 ### Contents
 - [README](https://github.com/bbc/news-apps-playbook/blob/master/accessibility/README.md)
   - [Our Baseline Commitment](https://github.com/bbc/news-apps-playbook/blob/master/accessibility/baseline.md)
