@@ -41,6 +41,8 @@ For example, just reading out ‘button’ is unlikely to be helpful, whereas �
 
 Equally, be aware of not giving too much detail, extraneous information, or promotional calls to action...e.g. ‘button to share this article on Boris Johnson with your friends and family’ - they can get the details from the context and certainly don't need to be pitched to use it.
 
+*Note: The operating system may well add context to your chosen description of the element so be sure you not only understand the platform specifics but also test them - 'share button button' tells everyone we did not test out accessibility very well.
+
 ## On Colour Contrast
 
 **Consider whether text is readable on any background (coloured or otherwise) in both light and dark modes.**
