@@ -1,64 +1,52 @@
-# Accessibility - Our Baseline Commitment
+# Baseline
 
-## TalkBack / VoiceOver
+This document details our baseline commitment for creating accessibile apps. Any accessibility features not included here should be considered [outside the scope](#out-of-scope) of our minimum requirements.
 
-**It is important that we always support navigation using audio cues on both platforms, to support our visually impaired users. The level of fidelity, however, must be determined by the fidelity of the feature at the time.**
+### Screen reader support
 
-For a new experimental feature that we want to test with our users, it should be usable via TalkBack and/or VoiceOver (as applicable) but there may be room for improvement.
+:white_check_mark: *Every logical user interface element, or group of elements, can be described by a screen reader*
 
-For example, if a new test Promo needs every element swiping through in order to have it read out, that is likely okay at this stage since no information is being lost.
+To better support our visually impaired users, it's important that our applications can be navigated using audio cues. This means we need to use *accessibility identififers* in our iOS applications to support [VoiceOver](https://support.apple.com/en-gb/guide/iphone/iph3e2e415f/ios), and *content descriptions* in our Android applications to support [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en-GB).
 
-However, if the feature is matured, or as it matures (and we become confident that it is working), then we must revisit this and commit more time to improving it.
+### Clear descriptions
 
-Continuing the example above, we might then improve the read out to group the elements of the Promo into one sentence and swipe.
+:white_check_mark: *The text that describes each user interface element is clear, concise, and meaningful*
 
-## Dynamic Type
+For example, we can indicate a button for sharing an article with the description "share button". A description like this clearly communicates what kind of element has been selected (a button), how to interact with it (press), and the result of the interaction (share).
 
-**Text within the apps must correspond to the users preferred text size, at the operating system level.**
+We should avoid descriptions that provide too much detail, extraneous information, or promotional calls to action. For example, it would *not* be appropriate to describe a share button as "button to share this article on Boris Johnson with your friends and family".
 
-There are, of course, exceptions to this, such as navigation bar titles, tab bar titles, and the like, where the operating system may not permit such changes.
 
-## Accessibility Identifiers
-*(not to be confused with traits or labels on iOS)*
+### Variable font size
 
-**Every logical user interface element, or grouping, must have an accessibility identifier.**
+:white_check_mark: *Text is displayed according to the user's preferred font size*
 
-These identifiers power many “out of the box” accessibility features, as well as our user interface tests, and so must be a part of every piece of work we do.
+Both iOS and Android operating systems allow users to set a font size that best suits them. We should create user interfaces that respect a range of different font sizes for all textual elements.
 
-## Dark Mode
+*Note: There are some elements - e.g. navigation bar titles, tab bar titles, and the like - where this may not be possible.*
 
-**Dark mode must be supported, and tested, for every user interface element.**
 
-Where no change is expected between modes, this is still considered supporting the feature.
+### Colour contrast
 
-## Further Considerations
+:white_check_mark: *Text is always legible against its background*
 
-### Announcements
+This is particularly important when displaying text over image backgrounds. For example, an image caption that uses white text could be completely illegible if the story is about [Snowmageddon](https://www.bbc.co.uk/bbcthree/article/f64389be-21fd-44ca-b135-d1e9f12624ee).
 
-**The text you choose to be read out need to be clear and usable _as an accessibility user_.**
+We should always consider accessible colour contrast for both light and dark modes.
 
-For example, just reading out ‘button’ is unlikely to be helpful, whereas ‘share button’ explains clearly what the element is (a button), how to interact with it (press), and what will happen when that is done (share).
+### Out of scope
 
-Equally, be aware of not giving too much detail, extraneous information, or promotional calls to action...e.g. ‘button to share this article on Boris Johnson with your friends and family’ - they can get the details from the context and certainly don't need to be pitched to use it.
-
-*Note: The operating system may well add context to your chosen description of the element so be sure you not only understand the platform specifics but also test them - 'share button button' tells everyone we did not test out accessibility very well.
-
-## On Colour Contrast
-
-**Consider whether text is readable on any background (coloured or otherwise) in both light and dark modes.**
-
-For example, take a look at the captions that overlay the article images - they could easily be completely unreadable if the text is white and the story is about [Snowmageddon](https://www.bbc.co.uk/bbcthree/article/f64389be-21fd-44ca-b135-d1e9f12624ee).
-
-## Out Of Scope
-
-Anything not included above should be considered as outside the scope of our commitment at the current time. This includes
+:no_good: The following features have been agreed as explicitly out of scope for our baseline:
 
 * Bold Text (iOS)
 * Motion Reduction (iOS)
 * Increase Contrast (iOS)
 
-(Disagree with this? Talk to people... Get buy-in and agreement... then raise a PR!)
 
-## References:
+### Further reading
 
-https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/
+[BBC Mobile Accessibility Guidelines](https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/)
+
+[Android Accessibility Developer Guidelines](https://developer.android.com/guide/topics/ui/accessibility/)
+
+[iOS Accessibility Developer Guidelines](https://developer.apple.com/accessibility/ios/)
