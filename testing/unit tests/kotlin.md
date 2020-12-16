@@ -3,7 +3,7 @@
 
 ### Frameworks
 
-We use [AssertJ](https://assertj.github.io/doc/#assertj-overview) for fluent assertions, and [Mockito Kotlin](https://github.com/nhaarman/mockito-kotlin) for working with mocks.
+Use [AssertJ](https://assertj.github.io/doc/#assertj-overview) for fluent assertions, and [Mockito Kotlin](https://github.com/nhaarman/mockito-kotlin) for working with mocks.
 
 ### Variable names
 Write `sut` to name the "system/subject under test" -  the class or function being tested.
