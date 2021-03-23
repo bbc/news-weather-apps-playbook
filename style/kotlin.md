@@ -74,3 +74,27 @@ _We don't do this_
 ```kotlin
 items.map { it.toEntity() }
 ```
+
+### Booleans
+
+Consider using Enums when the usage of Booleans in parameters can confuse the reader.
+
+When for example having:
+```kotlin
+setUserState(true)
+```
+
+This can be made more clear to read and understand with Enum usage 
+```kotlin
+enum class UserState{
+    ENABLED,
+    DISABLED
+}
+
+fun setUserState(userState: UserState) {
+// ..
+}
+
+setUserState(ENABLED)
+setUserState(DISABLED)
+```
