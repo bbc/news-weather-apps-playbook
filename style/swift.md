@@ -1019,12 +1019,6 @@ let message = "You cannot charge the flux " +
   "have \(credits) credits available."
 ```
 
-## Organization and Bundle Identifier
-
-Where an Xcode project is involved, the organization should be set to `Ray Wenderlich` and the Bundle Identifier set to `com.raywenderlich.TutorialName` where `TutorialName` is the name of the tutorial project.
-
-![Xcode Project settings](screens/project_settings.png)
-
 ## Copyright Statement
 
 There is no need to have a copyright header. It should be removed.
