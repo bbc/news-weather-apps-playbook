@@ -39,3 +39,32 @@ val name = "Joe Bloggs"
 val sut = Greeter(name)
 assertThat(sut.greeting()).isEqualTo("Hello, Joe Bloggs!")
 ```
+
+### Naming Tests
+
+Don't use "should". A test name is a definitive statement
+_Don't do this:_
+```kotlin
+@Test
+fun `getTotal should return 5`() {}
+```
+
+_Instead do this:_
+```kotlin
+@Test
+fun `getTotal returns 5`() {}
+```
+
+Don't use "correct" or "returns correct value". Be clear in what's expected. This also helps reveal gaps in unit tests
+_Don't do this:_
+```kotlin
+@Test
+fun `hasSeenDialog returns correct value`() {}
+```
+
+_Instead do this:_
+```kotlin
+@Test
+fun `hasSeenDialog returns true when user has seen dialog`() {}
+fun `hasSeenDialog returns false when user has not seen dialog`() {}
+```
