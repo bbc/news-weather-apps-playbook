@@ -55,7 +55,7 @@ _Instead do this:_
 fun `getTotal returns 5`() {}
 ```
 
-Don't use "correct" or "returns correct value". Be clear in what's expected. This also helps reveal gaps in unit tests
+If possible, don't use "correct" or "returns correct value". Check whether you can be clearer in what's expected. This can also help reveal gaps in unit tests
 _Don't do this:_
 ```kotlin
 @Test
