@@ -39,11 +39,13 @@ return if (isVisible) VISIBLE else GONE
 
 In general, prefer `if..else` syntax for binary conditions instead of `when`
 
-_We don't this:_
+_We don't do this:_
+```kotlin
 when (x) {
     null -> // ...
     else -> // ...
 }
+```
 
 When there are three or more options use a `when`
 
