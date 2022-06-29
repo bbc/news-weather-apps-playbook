@@ -68,10 +68,24 @@ fun getItemCount() =
     items.filterIsInstance<TextItem>()
         .filter { item -> item.hasLink }
         .size + if (isLoading) 1 else 0
-
 ```
 
 Avoid mixing functions that use an expression body with functions that use a return statement in the same class or file. If you do decide to mix the different styles, then they should be properly grouped together.  
+
+For conditionals the preference is the expression form
+
+_We do this_
+```kotlin
+return if (isVisible) VISIBLE else GONE
+```
+
+_We don't do this:_
+```kotlin
+if (isVisible)
+    return VISIBLE
+else
+    return GONE
+```
 
 ### Lambdas  
 
