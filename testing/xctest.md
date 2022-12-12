@@ -13,7 +13,7 @@ It is rare that something cannot or should not be unit tested, but if you stumbl
 ## Using `final` for `XCTestCase`
 Adding the `final` keyword to your class is an indicator to the reader that this class is not meant to be extended. This makes a lot of sense for `XCTestCase`. There are only a few situations where you would actually want to extend your `XCTestCase` class, but usually if you are doing this then it is probably a code smell that you're doing something wrong.
 
-`final` also has performance implications. This means you want to try and make as many of your classes `final` as possible.  Google will tell you more about this. __Note: it's possible to achieve the same performance gains by making all member variables private__
+Using `final` also has [performance implications](https://developer.apple.com/swift/blog/?id=27).
 
 ## setUp, tearDown and member variables
 Because of the way XCTestCase manages member variables we have to instantiate and then deallocate them in the `setUp` and `tearDown` fuctions.
