@@ -24,13 +24,14 @@ In light of this, the current best practice is to delcare any members as implici
 
 
 ## Dummys, Fakes, Stubs, Spies and Mocks
-- *Dummy* objects are passed around but never actually used. Usually they are just used to fill parameter lists.
-- *Fake* objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database is a good example).
-- *Stubs* provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test.
-- *Spies* are stubs that also record some information based on how they were called. One form of this might be an email service that records how many messages it was sent.
-- *Mocks* are what we are talking about here: objects pre-programmed with expectations which form a specification of the calls they are expected to receive.
+In an attempt to encourage consistency and readability in our tests, we have chosen to follow the vocabulary described in the article [Test Doubles](https://martinfowler.com/bliki/TestDouble.html) when describing the purposes of different objects created for use in tests. A short summary from this article:
+ 
+> - **Dummy** objects are passed around but never actually used. Usually they are just used to fill parameter lists.
+> - **Fake** objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an [InMemoryTestDatabase](https://martinfowler.com/bliki/InMemoryTestDatabase.html) is a good example).
+> - **Stubs** provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test.
+> - **Spies** are stubs that also record some information based on how they were called. One form of this might be an email service that records how many messages it was sent.
+> - **Mocks** are pre-programmed with expectations which form a specification of the calls they are expected to receive. They can throw an exception if they receive a call they don't expect and are checked during verification to ensure they got all the calls they were expecting.
 
-references:
-- https://martinfowler.com/articles/mocksArentStubs.html
-- https://martinfowler.com/bliki/TestDouble.html
-- https://qualitycoding.org/xctestcase-teardown/
+A more thorough discussion of these can be found in [Mocks Aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html).
+ 
+ There are a number of similar articles online, which we're sure will have various nuances in their explanations and preferences. We valued choosing and documenting one over the specific preferences of any given article.
