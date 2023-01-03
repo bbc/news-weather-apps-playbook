@@ -6,7 +6,7 @@
 1. [Dummys, Fakes, Stubs, Spies and Mocks](#Dummys-Fakes-Stubs-Spies-and-Mocks)
 
 ## Unit Test Strategy
-When working on a codebase with a team of any size, the modern convention is to unit test as much as possible. If you're in any doubt about whether you should write a unit test ask yourself: if my code changes were to be accidentally deleted by a merge conflict resolution or such like, would the test suites fail? If you're making a change to UI Layout then snapshot tests can act as a red flag if someone is to change your layout by accident later on.
+When working on a codebase with a team of any size, the modern convention is to unit test as much as possible. If you're in any doubt whether you should write a unit test ask yourself: if my code changes were to be accidentally deleted by a merge conflict resolution, would the test suites fail? If you're making a change to UI Layout then snapshot tests can act as a red flag if someone changes your layout by accident further down the line.
 
 It is rare that something cannot or should not be unit tested, but if you stumble across one of those situations, try to ensure that if your code is removed or altered erroneously, either the compiler will refuse to compile or there is a UI/Integration tests somewhere that will fail.  Test coverage tools can usually identify un-tested code but try not to lean on them. Good unit testing helps lead to well structured, [SOLID](https://en.wikipedia.org/wiki/SOLID) principle-following code.
 
