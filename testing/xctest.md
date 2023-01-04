@@ -51,7 +51,7 @@ A more thorough discussion of these can be found in [Mocks Aren't Stubs](https:/
       F --No--> I[Stub]
       G --Yes--> H[Spy]
       G --Yes, but via pre-programmed expectations--> J[Mock]
-      click C "#Dummy"
+      click C "#dummy"
 ```
 
 ### Dummy
