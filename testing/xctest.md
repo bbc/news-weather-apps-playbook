@@ -39,3 +39,16 @@ In an attempt to encourage consistency and readability in our tests, we have cho
 A more thorough discussion of these can be found in [Mocks Aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html).
  
  There are a number of similar articles online, which we're sure will have various nuances in their explanations and preferences. We valued choosing and documenting one over the specific preferences of any given article.
+
+```mermaid
+  flowchart TB;    
+      A[Need to create a Test Double] --> B{Will be executed during the test?}
+      B --Yes---> D{Needs to keep state between \nmultiple calls or interactions?}      
+      B --No--> C[Dummy]      
+      D ---> F{Will be used to control the input \nprovided to the system under test?}
+      D --Yes--> E[Fake]
+      F ---> G{Will be used to inspect the output \nproduced by the system under test?}
+      F --No--> I[Stub]
+      G --Yes--> H[Spy]
+      G --Yes, but via pre-programmed expectations--> J[Mock]
+```
